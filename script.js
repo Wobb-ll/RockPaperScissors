@@ -7,29 +7,22 @@ function getComputerChoice() {
     let cpuDecision;
 
     if (cpuChoice === 1) {
-        cpuDecision = "Rock"
+        cpuDecision = "rock"
     } else if (cpuChoice === 2) {
-        cpuDecision = "Paper"
+        cpuDecision = "paper"
     } else {
-        cpuDecision = "Scissors"
+        cpuDecision = "scissors"
     }
 
     return cpuDecision;
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("Please input Rock, Paper, or Scissors:")
+    let humanChoice = prompt("Please input Rock, Paper, or Scissors:").toLowerCase();
     
-    let humanDecision;
-
-    if (humanChoice === "Rock") {
-        humanDecision = "Rock"
-    } else if (humanChoice === "Paper"){
-        humanDecision = "Paper"
-    } else {
-        humanDecision = "Scissors"
-    }
-
-    return humanDecision;
+    return humanChoice;
 }
   
+function playRound(human, computer) {
+    if (human )
+}
