@@ -1,5 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
+let roundCount = 0;
 
 function getComputerChoice() {
     let cpuChoice = Math.floor(Math.random() * 3) + 1;
@@ -52,7 +53,18 @@ function playRound(human, computer) {
 }
 
 function playGame() {
-        playRound(getHumanChoice(), getComputerChoice(),);
+    do {
+        playRound(getHumanChoice(), getComputerChoice());
+        roundCount++;
+    } while (roundCount < 5);
+
+    if (humanScore < computerScore) {
+        console.log("You lose! Better luck next time!")
+    } else if (humanScore == computerScore) {
+        console.log("Tie Game! No winner decided!")
+    } else {
+        console.log("You Win! Congratulations!")
+    }
 }
 
 console.log(playGame());
