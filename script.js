@@ -24,24 +24,31 @@ function getHumanChoice() {
 }
   
 function playRound(human, computer) {
-    let winner;
     if (human === "rock" && computer === "paper" ) {
-
+        console.log("CPU Win! Paper beats Rock")
+        computerScore++;
     } else if (human === "rock" && computer === "rock") {
-
+        console.log("Tie Round!")
     } else if (human === "rock" && computer === "scissors") {
-
+        console.log("Player Win! Rock beats Scissors")
+        humanScore++;
     } else if (human === "paper" && computer === "rock") {
-
+        console.log("Player Win! Paper beats Rock")
+        humanScore++;
     } else if (human === "paper" && computer === "paper") {
-
+        console.log("Tie Round!")
     } else if (human === "paper" && computer === "scissors") {
-
+        console.log("CPU Win! Scissors beats Paper")
+        computerScore++;
     } else if (human === "scissors" && computer === "rock") {
-
+        console.log("CPU Win! Rock beats Scissors")
+        computerScore++;
     } else if (human === "scissors" && computer === "scissors") {
-
+        console.log("Tie Round!")
     } else if (human === "scissors" && computer === "paper") {
-        
+        console.log("Player Win! Scissors beats Paper")
+        humanScore++;
     }
 }
+
+playRound(getHumanChoice(), getComputerChoice(),);
