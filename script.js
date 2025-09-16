@@ -1,7 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-let roundCount = 0;
-
 function getComputerChoice() {
     let cpuChoice = Math.floor(Math.random() * 3) + 1;
 
@@ -23,8 +19,13 @@ function getHumanChoice() {
     
     return humanChoice;
 }
-  
-function playRound(human, computer) {
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    let roundCount = 0;
+    
+    function playRound(human, computer) {
     if (human === "rock" && computer === "paper" ) {
         console.log("CPU Win! Paper beats Rock")
         computerScore++;
@@ -52,7 +53,6 @@ function playRound(human, computer) {
     }
 }
 
-function playGame() {
     do {
         playRound(getHumanChoice(), getComputerChoice());
         roundCount++;
