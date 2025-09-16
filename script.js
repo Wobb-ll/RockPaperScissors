@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let cpuChoice = Math.floor(Math.random() * 3) + 1;
 
@@ -16,5 +19,17 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanChoice = prompt("Please input Rock, Paper, or Scissors:")
-    return humanChoice;
+    
+    let humanDecision;
+
+    if (humanChoice === "Rock") {
+        humanDecision = "Rock"
+    } else if (humanChoice === "Paper"){
+        humanDecision = "Paper"
+    } else {
+        humanDecision = "Scissors"
+    }
+
+    return humanDecision;
 }
+  
