@@ -24,5 +24,24 @@ function getHumanChoice() {
 }
   
 function playRound(human, computer) {
-    if (human )
+    let winner;
+    if (human === "rock" && computer === "paper" ) {
+
+    } else if (human === "rock" && computer === "rock") {
+
+    } else if (human === "rock" && computer === "scissors") {
+
+    } else if (human === "paper" && computer === "rock") {
+
+    } else if (human === "paper" && computer === "paper") {
+
+    } else if (human === "paper" && computer === "scissors") {
+
+    } else if (human === "scissors" && computer === "rock") {
+
+    } else if (human === "scissors" && computer === "scissors") {
+
+    } else if (human === "scissors" && computer === "paper") {
+        
+    }
 }
